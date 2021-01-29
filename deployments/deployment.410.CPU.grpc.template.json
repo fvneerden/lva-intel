@@ -100,7 +100,7 @@
               "status": "running",
               "restartPolicy": "always",
               "settings": {
-                "image": "lvasampleregistrymknbybwrljer2.azurecr.io/video-analytics-serving:0.4.1",
+                "image": "{URL TO YOUR INTEL SERVING IMAGE ON AZURE CONTAINER REGISTRY}",
                 "createOptions": {
                     "ExposedPorts": {
                       "80/tcp": {},
