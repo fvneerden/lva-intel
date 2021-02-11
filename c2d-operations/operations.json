@@ -4,7 +4,7 @@
 		{
 			"opName":"GraphTopologySet",
 			"opParams":{
-				"topologyUrl":"https://raw.githubusercontent.com/fvneerden/lva-intel/main/topology041v2.json"
+				"topologyUrl":"https://raw.githubusercontent.com/fvneerden/lva-intel/main/topologyOpenVINO.json"
 			}
 		},
 		{
@@ -12,8 +12,8 @@
 			"opParams":{
 				"name":"SampleGraph1",
 				"properties":{
-					"topologyName":"InferencingWithGrpcExtension",
-					"description":"Sample graph description",
+					"topologyName":"InferencingWithOpenVINOgRPC",
+					"description":"Record on motion to AMS Asset and record events from external models through gRPC Extension",
 					"parameters":[
                         {
                             "name": "rtspUrl",
@@ -58,7 +58,7 @@
 		{
 			"opName":"GraphTopologyDelete",
 			"opParams":{
-				"name":"InferencingWithGrpcExtension"
+				"name":"InferencingWithOpenVINOgRPC"
 			}
 		}
 	]
