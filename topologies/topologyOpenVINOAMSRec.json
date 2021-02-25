@@ -112,7 +112,23 @@
 						"nodeName":"rtspSource"
 					}
 				]
-			}
+			},
+			{
+        		 "@type": "#Microsoft.Media.MediaGraphSignalGateProcessor",
+        		 "name": "signalGateProcessor",
+       			 "inputs": [
+          			{
+           			 "nodeName": "grpcExtension"
+         			},
+          			{
+            			 "nodeName": "rtspSource"
+          			}
+        		],
+        		"activationEvaluationWindow": "PT1S",
+        		"activationSignalOffset": "PT0S",
+        		"minimumActivationTime": "PT30S",
+        		"maximumActivationTime": "PT30S"
+      			}
 		],
 		"sinks":[
 		{
