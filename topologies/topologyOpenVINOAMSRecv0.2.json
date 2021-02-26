@@ -40,11 +40,17 @@
 				"default":"dummyPassword"
 			},
 			{
-				"name":"hubSinkOutputName",
-				"type":"String",
-				"description":"Hub sink output name",
-				"default":"iothubsinkoutput"
-			},
+        			"name": "hubSourceInput",
+        			"type": "String",
+        			"description": "input name for hub source",
+        			"default": "recordingTrigger"
+      			},
+      			{
+        			"name": "hubSinkOutputName",
+        			"type": "String",
+        			"description": "hub sink output name",
+        			"default": "detectedObjects"
+      			},
 			{
 				"name":"imageScaleMode",
 				"type":"String",
