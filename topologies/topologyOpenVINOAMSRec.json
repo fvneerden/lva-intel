@@ -77,7 +77,7 @@
 						"password":"${rtspPassword}"
 					}
 				}
-			}
+			},
 			{
         		 "@type": "#Microsoft.Media.MediaGraphIoTHubMessageSource",
         		 "name": "iotMessageSource",
