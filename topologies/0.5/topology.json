@@ -73,7 +73,7 @@
                 "name": "extensionConfiguration",
                 "type": "String",
                 "description": "Optional extension configuration for the gRPC server",
-                "default": "{\"pipeline\":{\"name\":\"object_classification\",\"version\":\"vehicle_attributes_recognition\"}}"
+                "default": "{}"
             }
         ],
         "sources": [
