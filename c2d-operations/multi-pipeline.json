@@ -1,0 +1,173 @@
+{
+    "apiVersion": "2.0",
+    "operations": [
+        {
+            "opName": "GraphTopologySet",
+            "opParams": {
+                "topologyUrl": "https://raw.githubusercontent.com/fvneerden/lva-intel/main/topologies/0.5/topology.json"
+            }
+        },
+        {
+            "opName": "GraphInstanceSet",
+            "opParams": {
+                "name": "SampleGraphDetection",
+                "properties": {
+                    "topologyName": "InferencingWithGrpcExtension",
+                    "description": "Sample graph description",
+                    "parameters": [
+                        {
+                            "name": "rtspUrl",
+                            "value": "rtsp://rtspsim:554/media/co-final.mkv"
+                        },
+                        {
+                            "name": "rtspUserName",
+                            "value": "testuser"
+                        },
+                        {
+                            "name": "rtspPassword",
+                            "value": "testpassword"
+                        },
+                        {
+                            "name": "grpcExtensionAddress",
+                            "value": "tcp://lvaExtension:5001"
+                        },
+                        {
+                            "name": "extensionConfiguration",
+                            "value": "{\"pipeline\":{\"name\":\"object_detection\",\"version\":\"person_vehicle_bike_detection\"}}"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "opName": "GraphInstanceSet",
+            "opParams": {
+                "name": "SampleGraphClassification",
+                "properties": {
+                    "topologyName": "InferencingWithGrpcExtension",
+                    "description": "Sample graph description",
+                    "parameters": [
+                        {
+                            "name": "rtspUrl",
+                            "value": "rtsp://rtspsim:554/media/co-final.mkv"
+                        },
+                        {
+                            "name": "rtspUserName",
+                            "value": "testuser"
+                        },
+                        {
+                            "name": "rtspPassword",
+                            "value": "testpassword"
+                        },
+                        {
+                            "name": "grpcExtensionAddress",
+                            "value": "tcp://lvaExtension:5001"
+                        },
+                        {
+                            "name": "extensionConfiguration",
+                            "value": "{\"pipeline\":{\"name\":\"object_classification\",\"version\":\"vehicle_attributes_recognition\",\"parameters\":{\"detection-device\":\"MYRIAD\"}}}"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "opName": "GraphInstanceSet",
+            "opParams": {
+                "name": "SampleGraphTracking",
+                "properties": {
+                    "topologyName": "InferencingWithGrpcExtension",
+                    "description": "Sample graph description",
+                    "parameters": [
+                        {
+                            "name": "rtspUrl",
+                            "value": "rtsp://rtspsim:554/media/co-final.mkv"
+                        },
+                        {
+                            "name": "rtspUserName",
+                            "value": "testuser"
+                        },
+                        {
+                            "name": "rtspPassword",
+                            "value": "testpassword"
+                        },
+                        {
+                            "name": "grpcExtensionAddress",
+                            "value": "tcp://lvaExtension:5001"
+                        },
+                        {
+                            "name": "extensionConfiguration",
+                            "value": "{\"pipeline\":{\"name\":\"object_tracking\",\"version\":\"person_vehicle_bike_tracking\",\"parameters\":{\"detection-device\":\"GPU\"}}}"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "opName": "GraphInstanceActivate",
+            "opParams": {
+                "name": "SampleGraphDetection"
+            }
+        },
+        {
+            "opName": "GraphInstanceActivate",
+            "opParams": {
+                "name": "SampleGraphClassification"
+            }
+        },
+        {
+            "opName": "GraphInstanceActivate",
+            "opParams": {
+                "name": "SampleGraphTracking"
+            }
+        },
+        {
+            "opName": "WaitForInput",
+            "opParams": {
+                "message": "The topology will now be deactivated. Press Enter to continue"
+            }
+        },
+        {
+            "opName": "GraphInstanceDeactivate",
+            "opParams": {
+                "name": "SampleGraphDetection"
+            }
+        },
+        {
+            "opName": "GraphInstanceDeactivate",
+            "opParams": {
+                "name": "SampleGraphClassification"
+            }
+        },
+        {
+            "opName": "GraphInstanceDeactivate",
+            "opParams": {
+                "name": "SampleGraphTracking"
+            }
+        },
+        {
+            "opName": "GraphInstanceDelete",
+            "opParams": {
+                "name": "SampleGraphDetection"
+            }
+        },
+        {
+            "opName": "GraphInstanceDelete",
+            "opParams": {
+                "name": "SampleGraphClassification"
+            }
+        },
+        {
+            "opName": "GraphInstanceDelete",
+            "opParams": {
+                "name": "SampleGraphTracking"
+            }
+        },
+        {
+            "opName": "GraphTopologyDelete",
+            "opParams": {
+                "name": "InferencingWithGrpcExtension"
+            }
+        }
+    ]
+}
